@@ -20,6 +20,7 @@ func main() {
 	}
 
 	var locationJSON jsonobject
+	var userJSON userobject
 
 	for _, f := range files {
 		if !f.IsDir() {
@@ -34,6 +35,11 @@ func main() {
 				locationJSON.Append(file)
 				size := len(locationJSON.Locations)
 				fmt.Printf("Обработали %v, размер locations %v \n", name, size)
+			case "users":
+				file := dir + name
+				userJSON.Append(file)
+				size := len(userJSON.Users)
+				fmt.Printf("Обработали %v, размер users %v \n", name, size)
 			default:
 				fmt.Printf("Неизвестный тип файла %v\n", name)
 
