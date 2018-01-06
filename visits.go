@@ -39,8 +39,8 @@ func (v *visitobject) Append(path string) {
 
 	v.add(currentJson.Visits)
 
-	fmt.Printf("Размер исходного файла %v\n", len((*v).Visits))
-	fmt.Printf("Размер распарсеного файла %v\n", len(currentJson.Visits))
+	// fmt.Printf("Размер исходного файла %v\n", len((*v).Visits))
+	// fmt.Printf("Размер распарсеного файла %v\n", len(currentJson.Visits))
 
 	return
 }

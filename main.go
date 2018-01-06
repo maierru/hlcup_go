@@ -34,23 +34,36 @@ func main() {
 			case "locations":
 				file := dir + name
 				locationJSON.Append(file)
-				size := len(locationJSON.Locations)
-				fmt.Printf("Обработали %v, размер locations %v \n", name, size)
 			case "users":
 				file := dir + name
 				userJSON.Append(file)
-				size := len(userJSON.Users)
-				fmt.Printf("Обработали %v, размер users %v \n", name, size)
 			case "visits":
 				file := dir + name
 				visitJSON.Append(file)
-				size := len(visitJSON.Visits)
-				fmt.Printf("Обработали %v, размер visits %v \n", name, size)
 			default:
 				fmt.Printf("Неизвестный тип файла %v\n", name)
 
 			}
-
 		}
 	}
+
+	locations := make(map[int64]Location)
+	users := make(map[int64]User)
+	visits := make(map[int64]Visit)
+
+	for _, l := range locationJSON.Locations {
+		locations[l.ID] = l
+	}
+
+	for _, u := range userJSON.Users {
+		users[u.ID] = u
+	}
+
+	for _, v := range visitJSON.Visits {
+		visits[v.ID] = v
+	}
+	fmt.Printf("размер locations %v \n", len(locations))
+	fmt.Printf("размер users %v \n", len(users))
+	fmt.Printf("размер visits %v \n", len(visits))
+	fmt.Println(locations[1].Country)
 }

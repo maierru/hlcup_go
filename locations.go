@@ -40,8 +40,8 @@ func (j *jsonobject) Append(path string) {
 
 	j.add(currentJson.Locations)
 
-	fmt.Printf("Размер исходного файла %v\n", len((*j).Locations))
-	fmt.Printf("Размер распарсеного файла %v\n", len(currentJson.Locations))
+	// fmt.Printf("Размер исходного файла %v\n", len((*j).Locations))
+	// fmt.Printf("Размер распарсеного файла %v\n", len(currentJson.Locations))
 
 	return
 }

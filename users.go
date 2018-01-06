@@ -41,8 +41,8 @@ func (u *userobject) Append(path string) {
 
 	u.add(currentJson.Users)
 
-	fmt.Printf("Размер исходного файла %v\n", len((*u).Users))
-	fmt.Printf("Размер распарсеного файла %v\n", len(currentJson.Users))
+	// fmt.Printf("Размер исходного файла %v\n", len((*u).Users))
+	// fmt.Printf("Размер распарсеного файла %v\n", len(currentJson.Users))
 
 	return
 
