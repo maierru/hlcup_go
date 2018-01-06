@@ -41,7 +41,7 @@ func main() {
 				file := dir + name
 				visitJSON.Append(file)
 			default:
-				fmt.Printf("Неизвестный тип файла %v\n", name)
+				fmt.Printf("Неизвестный тип файла: %v\n", name)
 
 			}
 		}
@@ -65,5 +65,4 @@ func main() {
 	fmt.Printf("размер locations %v \n", len(locations))
 	fmt.Printf("размер users %v \n", len(users))
 	fmt.Printf("размер visits %v \n", len(visits))
-	fmt.Println(locations[1].Country)
 }
