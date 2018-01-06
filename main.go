@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Started ")
+	fmt.Println("Started loading json...")
 
 	dir := "/home/kkk/srv/hlcupdocs/data/TRAIN/data/"
 
@@ -65,4 +65,6 @@ func main() {
 	fmt.Printf("размер locations %v \n", len(locations))
 	fmt.Printf("размер users %v \n", len(users))
 	fmt.Printf("размер visits %v \n", len(visits))
+
+	Server()
 }
