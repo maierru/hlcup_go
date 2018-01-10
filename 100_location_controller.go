@@ -8,7 +8,7 @@ import (
 )
 
 // Item show determine location information
-func Item(ctx *fasthttp.RequestCtx) {
+func LocationShow(ctx *fasthttp.RequestCtx) {
 
 	id, err := strconv.ParseInt(ctx.UserValue("id").(string), 10, 64)
 	if err == nil {
