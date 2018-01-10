@@ -7,6 +7,18 @@ import (
 	"strings"
 )
 
+var (
+	locations map[int64]Location
+	users     map[int64]User
+	visits    map[int64]Visit
+)
+
+func init() {
+	locations = make(map[int64]Location)
+	users = make(map[int64]User)
+	visits = make(map[int64]Visit)
+}
+
 func main() {
 	fmt.Println("Started loading json...")
 
@@ -46,10 +58,6 @@ func main() {
 			}
 		}
 	}
-
-	locations := make(map[int64]Location)
-	users := make(map[int64]User)
-	visits := make(map[int64]Visit)
 
 	for _, l := range locationJSON.Locations {
 		locations[l.ID] = l
